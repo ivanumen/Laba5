@@ -1,0 +1,86 @@
+getUsers:
+  path:       /users
+  controller: App\Controller\UserController::getUsers
+  methods:    GET
+
+getUser:
+  path:       /user/{id}
+  controller: App\Controller\UserController::getUser1
+  methods:    GET
+  defaults:
+    id: 1
+
+postUser:
+  path:       /users
+  controller: App\Controller\UserController::createUser
+  methods:    POST
+
+patchUser:
+  path:       /user/{id}
+  controller: App\Controller\UserController::patchUser
+  methods:    PATCH
+  defaults:
+    id: 1
+
+deleteUser:
+  path:       /user/{id}
+  controller: App\Controller\UserController::deleteUser
+  methods:    DELETE
+  defaults:
+    id: 1
+
+getPurchasesByUserId:
+  path:       /user-purchases/{userId}
+  controller: App\Controller\PurchaseController::getPurchasesByUserId
+  methods:    GET
+
+getPurchase:
+  path:       /purchase/{id}
+  controller: App\Controller\PurchaseController::getPurchase
+  methods:    GET
+  defaults:
+    id: 1
+
+postPurchase:
+  path:       /purchase
+  controller: App\Controller\PurchaseController::createPurchase
+  methods:    POST
+
+deletePurchase:
+  path:       /purchase/{id}
+  controller: App\Controller\PurchaseController::deletePurchase
+  methods:    DELETE
+  defaults:
+    id: 1
+
+
+getBooks:
+  path:       /books
+  controller: App\Controller\BookController::getBooks
+  methods:    GET
+
+getBook:
+  path:       /book/{id}
+  controller: App\Controller\BookController::getBook
+  methods:    GET
+  defaults:
+    id: 1
+
+postBook:
+  path:       /books
+  controller: App\Controller\BookController::createBook
+  methods:    POST
+
+patchBook:
+  path:       /book/{id}
+  controller: App\Controller\BookController::patchBook
+  methods:    PATCH
+  defaults:
+    id: 1
+
+deleteBook:
+  path:       /book/{id}
+  controller: App\Controller\BookController::deleteBook
+  methods:    DELETE
+  defaults:
+    id: 1
